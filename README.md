@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+# Store Rating Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🚀 Project Description
+This is a comprehensive full-stack web application designed as a platform for users to rate and review stores. The application features a robust, role-based access control system, providing distinct functionalities for three types of users: System Administrators, Normal Users, and Store Owners.
 
-## Available Scripts
+Built with a modern tech stack, this project demonstrates best practices in both frontend and backend development, including secure authentication, RESTful API design, and a dynamic, component-based user interface.
 
-In the project directory, you can run:
+## ✨ Key Features
+## 👤 User Roles & Permissions
+* System Administrator: The superuser with full control over the platform.
+* Normal User: The standard user who can register, log in, and rate stores.
+* Store Owner: A user linked to a specific store, with access to its performance data.
 
-### `npm start`
+## ✅ Implemented Functionalities
+### System Administrator
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Full-featured dashboard with statistics on total users, stores, and ratings.
+* Ability to add new users with any role (Admin, Normal User, or Store Owner).
+* Ability to add new stores to the platform.
+* View complete, filterable lists of all users and stores with all required details.
+* Secure logout functionality.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Normal User
+* Public registration and secure login.
+* Ability to update their own password after logging in via a settings modal.
+* A dedicated dashboard to view a list of all registered stores.
+* Search functionality to filter stores by name or address.
+* A dynamic 5-star rating system to submit and modify ratings for stores.
+* Clear display of a store's overall rating and the user's own submitted rating.
+* Secure logout functionality.
 
-### `npm test`
+### Store Owner
+* Secure login and ability to update their own password.
+* A dedicated dashboard showing key metrics for their specific store.
+* View their store's current average rating.
+* View a detailed list of all ratings their store has received, including which user submitted them.
+* Secure logout functionality.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack
+* Frontend: React.js
+* Backend: Node.js with Express.js
+* Database: PostgreSQL
+* Authentication: JSON Web Tokens (JWT)
+* Password Hashing: bcrypt
 
-### `npm run build`
+## 🏁 Getting Started
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 1. Prerequisites
+Before you begin, ensure you have the following installed on your system:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Node.js and npm (LTS version recommended)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### PostgreSQL
 
-### `npm run eject`
+- 2. Database Setup
+Open pgAdmin (or your preferred PostgreSQL client).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Create a new database and name it store_ratings.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Open the Query Tool for your new database.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Copy and paste the entire content of the schema.sql script below and execute it. This will create all the necessary tables and types.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- 3. Backend Setup
+Navigate to the backend directory in your terminal:
 
-## Learn More
+```
+cd backend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Install the required npm packages:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npm install
+```
 
-### Code Splitting
+Create a new file named .env in the root of the backend folder. This file will hold your secret credentials. Copy the content of .env.example into it and fill in your details:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+.env.example
+```
+# PostgreSQL Database Connection
+DB_USER=postgres
+DB_HOST=localhost
+DB_DATABASE=store_ratings
+DB_PASSWORD=your_database_password
+DB_PORT=5432
+```
 
-### Analyzing the Bundle Size
+- 4. Frontend Setup
+Open a new terminal and navigate to the frontend directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+cd frontend
 
-### Making a Progressive Web App
+Install the required npm packages:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm install
+```
 
-### Advanced Configuration
+## 🖥️ Running the Application
+You need to have two terminals open simultaneously to run the full stack.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Start the Backend Server:
+In your backend terminal, run:
+```
+npm run dev
+```
 
-### Deployment
+The server should start on http://localhost:3001. You will see a message confirming the database connection.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Start the Frontend Application:
+In your frontend terminal, run:
+```
+npm start
+```
 
-### `npm run build` fails to minify
+This will automatically open your default web browser to http://localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Made By
+Yash Kumar
