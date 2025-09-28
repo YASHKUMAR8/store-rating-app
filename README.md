@@ -46,14 +46,14 @@ Built with a modern tech stack, this project demonstrates best practices in both
 ## 🏁 Getting Started
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-- 1. Prerequisites
+1. Prerequisites
 Before you begin, ensure you have the following installed on your system:
 
 Node.js and npm (LTS version recommended)
 
 ### PostgreSQL
 
-- 2. Database Setup
+2. Database Setup
 Open pgAdmin (or your preferred PostgreSQL client).
 
 Create a new database and name it store_ratings.
@@ -62,7 +62,7 @@ Open the Query Tool for your new database.
 
 Copy and paste the entire content of the schema.sql script below and execute it. This will create all the necessary tables and types.
 
-- 3. Backend Setup
+3. Backend Setup
 Navigate to the backend directory in your terminal:
 
 ```
@@ -85,7 +85,7 @@ DB_PASSWORD=your_database_password
 DB_PORT=5432
 ```
 
-- 4. Frontend Setup
+4. Frontend Setup
 Open a new terminal and navigate to the frontend directory:
 
 ```
